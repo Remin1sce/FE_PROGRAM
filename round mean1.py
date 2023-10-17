@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+c = int(input())
+mean = round(float((a+b+c)/3), 2)
+print(mean)
