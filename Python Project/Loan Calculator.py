@@ -1,7 +1,7 @@
 from tkinter import * #Import Tkinter
 import tkinter.messagebox
 
-class loancal: #Creat Class
+class loancal: #Create Class
 
     def __init__(self):
 
@@ -9,7 +9,7 @@ class loancal: #Creat Class
         global root 
         root = Tk()
         root.title("Loan Calculator")
-        root.geometry("500x400")
+        root.geometry("550x400")
 
         #add labels
         Label(root,text="LOAN CALCULATOR",font=20,fg="white",bg="gray").place(x=175,y=5)
@@ -17,27 +17,27 @@ class loancal: #Creat Class
         Label(root,text="Interest Rate",font=10).place(x=65,y=80)
         Label(root,text="Loan Term",font=10).place(x=65,y=110)
         Label(root,text="% per year",font=5).place(x=400,y=80)
-        Label(root,text="years",font=5).place(x=300,y=110)
+        Label(root,text="years",font=5).place(x=295,y=110)
         Label(root,text="months",font=5).place(x=390,y=110)
         
-        Label(root,text="Total Payment :  ",font=10,fg="Blue").place(x=100,y=200)
-        Label(root,text="Monthly Payment :  ",font=10,fg="Blue").place(x=100,y=225)
-        Label(root,text="Total Interest :  ",font=10,fg="Blue").place(x=100,y=250)
-        Label(root,text="Annual Payment :  ",font=10,fg="Blue").place(x=100,y=275)
+        Label(root,text="Total Payment :  ",font=10,fg="Blue").place(x=80, y=200)
+        Label(root,text="Monthly Payment :  ",font=10,fg="Blue").place(x=80,y=225)
+        Label(root,text="Total Interest :  ",font=10,fg="Blue").place(x=80,y=250)
+        Label(root,text="Annual Payment :  ",font=10,fg="Blue").place(x=80,y=275)
         
         #add entry block
         self.a = StringVar()
         self.r = StringVar()
-        self.y = IntVar()
-        self.m = IntVar()
+        self.y = StringVar()
+        self.m = StringVar()
         self.amount = Entry(root,textvariable=self.a)
         self.amount.place(x=260,y=50)
         self.ir = Entry(root,textvariable=self.r)
         self.ir.place(x=260,y=80)
         self.years = Entry(root,textvariable=self.y,width=5)
-        self.years.place(x=260,y=110)
+        self.years.place(x=260,y=115)
         self.months = Entry(root,textvariable=self.m,width=5)
-        self.months.place(x=350,y=110)
+        self.months.place(x=350,y=115)
         
         #result label
         self.resultTotalPay = StringVar()
@@ -49,7 +49,7 @@ class loancal: #Creat Class
         self.resultAnnual = StringVar()
         Label(root,textvariable=self.resultAnnual,font=10,fg="Red").place(x=250,y=275)
         
-        #add botton & command
+        #add button & command
         calculate = Button(root,text="Calculate",fg="light blue",bg="gray",command=self.cal_total_pay).place(x=250, y=160)
         reset = Button(root,text="Reset",fg="light blue",bg="gray",command=self.reset).place(x=200, y=160)
         calamount = Button(root,text="Cal",fg="white", bg="gray",command=self.cal_amount).place(x=400,y=50)
@@ -71,15 +71,21 @@ class loancal: #Creat Class
         try:
             afloat = float(self.a.get())
             rfloat = float(self.r.get())
+            years = int(self.y.get())
+            months = int(self.m.get())
             a = afloat
             r = rfloat /1200 #rate/100*12
-            t = self.y.get()*12 + self.m.get() #term(month) = year*12 + month
+            t = years*12 + months #term(month) = year*12 + month
+            if a < 0 or r < 0 or t < 0:
+                tkinter.messagebox.showinfo("Warning", "Please enter non-negative values.")
+                return
+
             self.monthlyPayment = round(a * ( (r*((1+r)**t)) / (((1+r)**t)-1)),2) # monthly loan payment equation
             self.totalPayment = round(float(self.monthlyPayment) * int(t),2) # total loan payment equation
-            self.totalinterest = round(self.totalPayment - a,2) # total interest rest equation
+            self.totalinterest = round(self.totalPayment - a,2) # total interest equation
             self.annualpayment = round(self.monthlyPayment * 12,2) # annual payment equation
-        except (ZeroDivisionError, tkinter.TclError, ValueError, AttributeError) as e:
-            tkinter.messagebox.showinfo("Warning", f"Please enter a valid value. Error: {e}")
+        except:
+            tkinter.messagebox.showinfo("Warning", f"Please enter a valid value.")
         # set the result to the label
         self.resultTotalPay.set(self.totalPayment) 
         self.resultMonthlyPay.set(self.monthlyPayment)
@@ -89,21 +95,21 @@ class loancal: #Creat Class
     # function that calculate loan amount from property price and down payment
     def cal_amount(self):
         global window1
-        window1 = Toplevel(root) # creat new window
+        window1 = Toplevel(root) # create new window
         window1.title("Calculate Loan Amount")
-        window1.geometry("400x200")
+        window1.geometry("600x300")
         
         #labels
         Label(window1,text="Property Price",font=10).grid(column=0,row=0)
         Label(window1,text="Down Payment",font=10).grid(column=0,row=1)
         
         #entry
-        self.price = IntVar()
+        self.price = DoubleVar()
         Entry(window1,textvariable=self.price).grid(column=2,row=0)
-        self.down = IntVar()
+        self.down = DoubleVar()
         Entry(window1,textvariable=self.down).grid(column=2,row=1)
         
-        #result lebel
+        #result label
         self.resultAmount = StringVar()
         Label(window1,textvariable=self.resultAmount,font=10,fg="Red").grid(column=1,row=3)
         
@@ -112,6 +118,9 @@ class loancal: #Creat Class
         
     # function for calculate loan amount
     def Ok(self):
+        if self.price.get() < 0 or self.down.get() < 0:
+            tkinter.messagebox.showinfo("Warning", "Please enter non-negative values.")
+            return
         a = self.price.get() - self.down.get() # loan amount = property price - down payment(%)
         #label
         Label(window1,text="Your Loan amount is ",font=10,fg="Blue").grid(column=0,row=3)

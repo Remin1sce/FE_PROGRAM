@@ -1,0 +1,196 @@
+Loan Amount = 
+Interest Rate =  % per year
+Loan Term = 0 year 0 month
+The result are
+Loan Amount = 65000
+Interest Rate =  % per year
+Loan Term = 0 year 0 month
+The result are
+Loan Amount = 65000
+Interest Rate =  % per year
+Loan Term = 0 year 0 month
+The result are
+Loan Amount = 5000
+Interest Rate = 7 % per year
+Loan Term = 5 year 10 month
+The result are
+Total Payment : 6104.7
+Monthly Payment : 87.21
+Total Interest : 1104.7
+Annual Payment : 1046.52
+
+Loan Amount = 70000
+Interest Rate = 5 % per year
+Loan Term = 1 year 0 month
+The result are
+Total Payment : 71910.24
+Monthly Payment : 5992.52
+Total Interest : 1910.24
+Annual Payment : 71910.24
+
+Loan Amount = 5000
+Interest Rate = 7 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 5372.64
+Monthly Payment : 223.86
+Total Interest : 372.64
+Annual Payment : 2686.32
+
+Loan Amount = 5000
+Interest Rate =  % per year
+Loan Amount = 80000
+Interest Rate = 5 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 84233.04
+Monthly Payment : 3509.71
+Total Interest : 4233.04
+Annual Payment : 42116.52
+
+Loan Amount = 80000
+Interest Rate = 5 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 84233.04
+Monthly Payment : 3509.71
+Total Interest : 4233.04
+Annual Payment : 42116.52
+
+Loan Amount = 1000
+Interest Rate = 7 % per year
+Loan Term = 3 year 0 month
+The result are
+Total Payment : 1111.68
+Monthly Payment : 30.88
+Total Interest : 111.68
+Annual Payment : 370.56
+
+Loan Amount = 70000
+Interest Rate = 7 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 75217.92
+Monthly Payment : 3134.08
+Total Interest : 5217.92
+Annual Payment : 37608.96
+
+Loan Amount = 500000
+Interest Rate = 7 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 537270.96
+Monthly Payment : 22386.29
+Total Interest : 37270.96
+Annual Payment : 268635.48
+
+Loan Amount = 500000
+Interest Rate = 7 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 537270.96
+Monthly Payment : 22386.29
+Total Interest : 37270.96
+Annual Payment : 268635.48
+
+Loan Amount = 700000
+Interest Rate = 7 % per year
+Loan Term = 5 year 0 month
+The result are
+Total Payment : 831650.4
+Monthly Payment : 13860.84
+Total Interest : 131650.4
+Annual Payment : 166330.08
+
+Loan Amount = 700000
+Interest Rate = 7 % per year
+Loan Term = 5 year 0 month
+The result are
+Total Payment : 831650.4
+Monthly Payment : 13860.84
+Total Interest : 131650.4
+Annual Payment : 166330.08
+
+Loan Amount = 70000
+Interest Rate = 7 % per year
+Loan Term = 3 year 0 month
+The result are
+Total Payment : 77810.4
+Monthly Payment : 2161.4
+Total Interest : 7810.4
+Annual Payment : 25936.8
+
+Loan Amount = 50000
+Interest Rate = 7 % per year
+Loan Term = 3 year 0 month
+The result are
+Total Payment : 55578.6
+Monthly Payment : 1543.85
+Total Interest : 5578.6
+Annual Payment : 18526.2
+
+
+
+Loan Amount = 70000
+Interest Rate = 3 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 72208.32
+Monthly Payment : 3008.68
+Total Interest : 2208.32
+Annual Payment : 36104.16
+
+Loan Amount = 800000
+Interest Rate = 4 % per year
+Loan Term = 2 year 0 month
+The result are
+Total Payment : 833758.56
+Monthly Payment : 34739.94
+Total Interest : 33758.56
+Annual Payment : 416879.28
+
+Loan Amount = 43143.95685
+Interest Rate = 7 % per year
+Loan Term = 1 year 7 month
+The result are
+Total Payment : 7984.37
+Monthly Payment : 420.23
+Total Interest : 447.37
+Annual Payment : 5042.76
+
+Loan Amount = 70000
+Interest Rate = 3 % per year
+Loan Term = 1 year 0 month
+The result are
+Total Payment : 71142.72
+Monthly Payment : 5928.56
+Total Interest : 1142.72
+Annual Payment : 71142.72
+
+Loan Amount = 635608.0
+Interest Rate = 7 % per year
+Loan Term = 4 year 6 month
+The result are
+Total Payment : 742800.24
+Monthly Payment : 13755.56
+Total Interest : 107192.24
+Annual Payment : 165066.72
+
+Loan Amount = 500000
+Interest Rate = 11 % per year
+Loan Term = 3 year 0 month
+The result are
+Total Payment : 589296.96
+Monthly Payment : 16369.36
+Total Interest : 89296.96
+Annual Payment : 196432.32
+
+Loan Amount = 20000.0
+Interest Rate = 7 % per year
+Loan Term = 3 year 6 month
+The result are
+Total Payment : 22607.76
+Monthly Payment : 538.28
+Total Interest : 2607.76
+Annual Payment : 6459.36
+
