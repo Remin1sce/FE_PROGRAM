@@ -126,7 +126,7 @@ class loancal: #Create Class
         Label(window1,text="Your Loan amount is ",font=10,fg="Blue").grid(column=0,row=3)
         self.resultAmount.set(a)
 
-        #delete old amount in main window and insert new amount calculated from this function
+        #delete old amount in main window and insert new amount calculated from this function.
         self.amount.delete(0,END)
         self.amount.insert(0,a)
 
